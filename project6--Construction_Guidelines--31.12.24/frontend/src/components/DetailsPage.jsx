@@ -16,7 +16,7 @@ function DetailsPage() {
     const navigate = useNavigate();
 
   useEffect(() => {
-    const baseURL =  import.meta.env.SSVCONGUIDE_APP_API_URL;
+    const baseURL =  import.meta.env.VITE_SSVCONGUIDE_API_URL;
     // Fetch category data
     axios
       .get(`${baseURL}/details/${name_of_work}`)
