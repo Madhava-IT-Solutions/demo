@@ -4,7 +4,23 @@ const cors = require('cors');
 require('dotenv').config();
 
 const app = express();
-app.use(cors());
+
+const allowedOrigins = ['https://your-frontend-url.onrender.com']; // Replace with the actual URL of your frontend
+
+const corsOptions = {
+  origin: function (origin, callback) {
+    if (allowedOrigins.includes(origin) || !origin) {
+      // Allow requests from the allowed domains
+      callback(null, true);
+    } else {
+      // Reject requests from other domains
+      callback(new Error('Not allowed by CORS'), false);
+    }
+  },
+};
+
+app.use(cors(corsOptions)); // Use the CORS options
+
 app.use(express.json());
 
 // MySQL Configuration
