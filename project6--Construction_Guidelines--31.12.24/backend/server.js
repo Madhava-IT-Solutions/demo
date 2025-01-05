@@ -5,7 +5,7 @@ require('dotenv').config();
 
 const app = express();
 
-const allowedOrigins = ['https://your-frontend-url.onrender.com']; // Replace with the actual URL of your frontend
+const allowedOrigins = ['https://ssv-construction-tips-frontend.onrender.com/']; // Replace with the actual URL of your frontend
 
 const corsOptions = {
   origin: function (origin, callback) {
@@ -69,8 +69,10 @@ app.get('/details/:name_of_work?', async (req, res) => {
   }
 });
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 10000;
 app.listen(PORT, () => {
   const environment = process.env.RENDER_EXTERNAL_URL || `http://localhost:${PORT}`;
   console.log(`Server running on ${environment}`);
 });
+
+app.get('/health', (req, res) => res.send('Backend is running!'));

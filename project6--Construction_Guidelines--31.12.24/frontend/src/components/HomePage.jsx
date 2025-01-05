@@ -148,9 +148,9 @@ function HomePage() {
   return (
     <div className='home'>
       <h1>Construction <span className='g'>Guide</span></h1>
-      <div className='page-description'>
+      {/* <div className='page-description'>
         <p>The Construction Guide page serves as a comprehensive resource for all major work categories, including construction, electrical, and mechanical works. It provides organized and detailed information to support project planning and execution.</p>
-      </div>
+      </div> */}
       <div className='search-container'>
         <div style={styles.searchContainer}>
           <input
