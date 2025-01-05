@@ -20,22 +20,22 @@
 }
 .home h2{
   font-size: 24px;
-  color: rgb(205, 86, 86);;
+  color: #a90000;
 }
 .home h2:hover{
   transition: 0.3s;
-  color: rgb(205, 86, 86);
+  color: #a90000;
   cursor:context-menu;
 }
 .category-heading{
   font-size: 24px;
-  color: red;
+  color: #a90000;
 }
 span{
   transition: 0.3s;
 }
 .g{
-  color: rgb(247, 196, 44);
+  color: #ffc03d;
 }
 /* .page-description{
   width: 80%;
