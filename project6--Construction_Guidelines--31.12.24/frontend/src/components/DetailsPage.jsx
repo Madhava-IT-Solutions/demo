@@ -16,6 +16,7 @@ function DetailsPage() {
     const navigate = useNavigate();
 
   useEffect(() => {
+    console.log("Fetching data for: ", name_of_work);  // Log to check if name_of_work is valid
     const baseURL =  import.meta.env.VITE_SSVCONGUIDE_API_URL;
     // Fetch category data
     axios
@@ -25,6 +26,7 @@ function DetailsPage() {
         setLoading(false);
       })
       .catch((error) => {
+        console.log("Error:", error);  // Log detailed error to the console
         setError('Failed to fetch data');
         console.log(error)
         setLoading(false);
