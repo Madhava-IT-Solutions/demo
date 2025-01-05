@@ -33,6 +33,21 @@ const dbConfig = {
   connectTimeout: 5000// Change the port to 3306
 };
 
+(async () => {
+  let connection;
+  try {
+    connection = await mysql.createConnection(dbConfig);
+    console.log('✅ Connected to the database successfully.');
+    await connection.query('SELECT 1'); // Test query
+  } catch (err) {
+    console.error('❌ Database connection failed:', err.message);
+    process.exit(1); // Exit if the connection fails
+  } finally {
+    if (connection) await connection.end();
+  }
+})();
+
+
 // Validate environment variables
 if (!dbConfig.host || !dbConfig.user || !dbConfig.password || !dbConfig.database) {
   console.error('Database environment variables are missing.');
