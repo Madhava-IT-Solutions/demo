@@ -166,12 +166,12 @@ function HomePage() {
       </div>
 
       <h2 className='work-category-heading'>Construction works</h2>
-      <p>Below are the main categories of construction works. Click on any category to access related information. </p>
+      {/* <p>Below are the main categories of construction works. Click on any category to access related information. </p> */}
       <div
         className='grid-container1'
         id='construction'
         onScroll={handleScroll1}
-        style={{ height: '400px', overflowY: 'scroll' }} // Scrollable container
+        style={{ height: '1000px', overflowY: 'scroll' }} // Scrollable container
       >
         {constructionItems
           .filter((item) =>
