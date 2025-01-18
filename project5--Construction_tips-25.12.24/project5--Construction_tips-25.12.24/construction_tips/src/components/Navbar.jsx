@@ -2,7 +2,7 @@
 // components/Navbar.js
 import React from 'react';
 import { Link } from 'react-router-dom';
-import {path} from 'react';
+
 
 import './Navbar.css';
 
